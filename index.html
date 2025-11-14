@@ -6,21 +6,57 @@
     <title>To do List Website</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <!-- Bagian Header -->
-    <header>
-        <h1> TODO LIST ACTIVITIES </h1>
-    </header>
+    <!-- <header>
+        <h1 class="font-bold text-3xl text-color"> TODO LIST ACTIVITIES </h1>
+    </header> -->
 
     <!-- Bagian Main -->
-    <main>
+    <main class ="main-border">
+        <h1 class="header-todo"> Todo List </h1>
+        <section class = "form-section">
+            <form>
+                <input type="text" id="todo-masukkan" class="border-add-name-date" placeholder="Add a todo...">
+                <input type="date" id="todo-tanggal" class="border-add-name-date" placeholder="mm/dd/yyyy">
+            </form>
+            <button id="tombol-tambah" class="border rounded p-2 text-white button-add-delete"> + </button>
+        </section>
 
+        <section class = "flex pt-2 justify-between">
+            <button class="button-sort"> FILTER </button>
+            <button class="button-add-delete"> DELETE ALL</button>
+        </section>
+
+        <section id="daftar-todo" class="pt-2">
+            <!-- Daftar todo akan ditampilkan di sini -->
+            <h1 class = "text-2xl font-semibold text-color">
+                Daftar aktivitas
+            </h1>
+
+            <table class = table-todo>
+                <thead>
+                    <tr>
+                        <th> TASK </th>
+                        <th> DUE DATE </th>
+                        <th> STATUS </th>
+                        <th> ACTION </th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td colspan="4"> Tidak ada aktivitas </td>
+                        </tr>
+                    </tbody>   
+                </thead>
+            </table>
+        </section>
     </main>
 
     <!-- Bagian Footer -->
     <footer>
-
+        <p class="footer-todo"> Copyright &copy; 2025 - To do List Website Putra</p>
     </footer>
 
 
