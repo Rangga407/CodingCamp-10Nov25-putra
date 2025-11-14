@@ -98,6 +98,24 @@ body {
     border-radius: 30px;
 }
 
+.button-done-table{
+    background-color: #1d283a;
+    color: #abc7e8;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    padding: 5px;
+}
+
+.button-delete-table{
+    background-color: #828DF8;
+    color: #37394E;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    padding: 5px;
+}
+
 .footer-todo{
     text-align: end;
     color: #AFC0E9;

@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <!-- Bagian Header -->
+    <!-- Bagian Header (Untuk sekarang tidak jadi saya pakai)-->
     <!-- <header>
         <h1 class="font-bold text-3xl text-color"> TODO LIST ACTIVITIES </h1>
     </header> -->
@@ -22,12 +22,12 @@
                 <input type="text" id="todo-masukkan" class="border-add-name-date" placeholder="Add a todo...">
                 <input type="date" id="todo-tanggal" class="border-add-name-date" placeholder="mm/dd/yyyy">
             </form>
-            <button id="tombol-tambah" class="border rounded p-2 text-white button-add-delete"> + </button>
+            <button id="tombol-tambah" onclick = "addTodo()" class="border rounded p-2 text-white button-add-delete"> + </button>
         </section>
 
         <section class = "flex pt-2 justify-between">
-            <button class="button-sort"> FILTER </button>
-            <button class="button-add-delete"> DELETE ALL</button>
+            <button onclick = "filterDateTodo()" class="button-sort"> FILTER </button>
+            <button onclick = "clearAllTodo()" class = "button-add-delete"> DELETE ALL</button>
         </section>
 
         <section id="daftar-todo" class="pt-2">
@@ -44,9 +44,9 @@
                         <th> STATUS </th>
                         <th> ACTION </th>
                     </tr>
-                    <tbody>
+                    <tbody id = "tbody-todo">
                         <tr>
-                            <td colspan="4"> Tidak ada aktivitas </td>
+                            <td colspan="4"> Tidak ada aktivitas yang ditemukan</td>
                         </tr>
                     </tbody>   
                 </thead>
